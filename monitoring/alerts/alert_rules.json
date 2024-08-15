@@ -1,0 +1,16 @@
+{
+  "alerts": [
+    {
+      "name": "HighCPUUsage",
+      "condition": "avg(CPUPercentage) > 80",
+      "actions": ["SendEmail", "ScaleUp"],
+      "severity": "High"
+    },
+    {
+      "name": "ServiceFailure",
+      "condition": "failures > 5",
+      "actions": ["SendSMS", "RestartService"],
+      "severity": "Critical"
+    }
+  ]
+}
