@@ -1,0 +1,23 @@
+{
+  "resourceId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.EventGrid/domains/<event-grid-domain>",
+  "logs": [
+    {
+      "category": "AllMetrics",
+      "enabled": true,
+      "retentionPolicy": {
+        "enabled": true,
+        "days": 30
+      }
+    }
+  ],
+  "metrics": [
+    {
+      "category": "Transaction",
+      "enabled": true,
+      "retentionPolicy": {
+        "enabled": true,
+        "days": 30
+      }
+    }
+  ]
+}
