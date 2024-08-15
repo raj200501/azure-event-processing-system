@@ -1,0 +1,7 @@
+apiVersion: v2
+name: azure-event-processing-system
+description: A Helm chart for deploying the Azure Event Processing System
+type: application
+version: 0.1.0
+appVersion: "1.0"
+dependencies: []
