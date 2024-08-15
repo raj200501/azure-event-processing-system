@@ -1,0 +1,16 @@
+{
+  "model_name": "EventClassifier",
+  "scoring_uri": "http://<service-uri>/score",
+  "input": {
+    "type": "json",
+    "data": {
+      "feature1": "value1",
+      "feature2": "value2",
+      "feature3": "value3"
+    }
+  },
+  "output": {
+    "type": "json",
+    "prediction": "event_type"
+  }
+}
