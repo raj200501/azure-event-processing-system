@@ -62,3 +62,44 @@ Contributions are welcome! Please submit pull requests to improve the system.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## ✅ Verified Quickstart (Local Simulator)
+
+These commands run a local simulator that mirrors the ingestion → processing → results flow
+without requiring Azure resources. This is useful for validating the repo in a clean environment.
+
+```bash
+./scripts/run_local.sh
+```
+
+To customize the number of events or payload base:
+
+```bash
+./scripts/run_local.sh --count 5 --payload demo-event
+```
+
+## ✅ Verified Smoke Test
+
+```bash
+./scripts/smoke_test.sh
+```
+
+## Troubleshooting
+
+- **`./aks_deploy.sh: Permission denied`**
+
+  Ensure the script is executable or run it via bash:
+
+  ```bash
+  chmod +x infrastructure/aks-deployment/aks_deploy.sh
+  ./infrastructure/aks-deployment/aks_deploy.sh
+  ```
+
+- **`az: command not found` or Azure authentication errors**
+
+  The AKS deployment requires the Azure CLI, Helm, and an authenticated Azure session. Install
+  the Azure CLI and run `az login` before executing `aks_deploy.sh`.
+
+- **No Azure resources available**
+
+  Use the local simulator (`./scripts/run_local.sh`) to validate the pipeline logic without Azure.
